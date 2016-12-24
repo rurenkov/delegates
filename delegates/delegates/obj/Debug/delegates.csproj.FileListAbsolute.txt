@@ -1,0 +1,6 @@
+D:\vet\sharp\delegates\delegates\delegates\bin\Debug\delegates.exe.config
+D:\vet\sharp\delegates\delegates\delegates\obj\Debug\delegates.csprojResolveAssemblyReference.cache
+D:\vet\sharp\delegates\delegates\delegates\bin\Debug\delegates.exe
+D:\vet\sharp\delegates\delegates\delegates\bin\Debug\delegates.pdb
+D:\vet\sharp\delegates\delegates\delegates\obj\Debug\delegates.exe
+D:\vet\sharp\delegates\delegates\delegates\obj\Debug\delegates.pdb
