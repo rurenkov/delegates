@@ -33,11 +33,12 @@ namespace delegates
             array1 = new int[capacity];
             DynamicArray<int> dynamicArray = new DynamicArray<int>();   // publisher of the event
             var subscribers = new Subscribers();                              //subscriber  on this event
+            
 
             dynamicArray.DataInserted += subscribers.OnDataInserted;   // registration of subscription for inserted
             dynamicArray.DataAdded += subscribers.OnDataAdded;            // registration of subscription for added
             dynamicArray.DataRemoved += subscribers.OnDataRemoved;            // registration of subscription for removed
-
+            
 
             while (free1 > 0)
             {

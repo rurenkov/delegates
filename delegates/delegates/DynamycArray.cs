@@ -105,17 +105,45 @@ namespace delegates
             return Array[IndexToInsert];
         }
 
+
+        public bool IsFull()
+        {
+
+            if (size == maxSize)
+            {
+                Console.WriteLine("QUEUE is full");
+            }
+            return true;
+
+        }
+
+
+        public bool IsEmpty()
+        {
+
+            if (size == 0)
+            {
+                Console.WriteLine("QUEUE is empty");
+            }
+
+            return true;
+
+        }
+
+
+
+
         public void Print()
         {
             Console.WriteLine("[{0}]", string.Join(", ", Array));
 
         }
 
-        //*********************************************/
-        //*********************************************/
-        //*********************************************/
+        //*************************************************************************************/
+        //*************************************************************************************/
+        //*************************************************************************************/
         //define events and delegates
-        
+
 
 
         // 1- define delegate
