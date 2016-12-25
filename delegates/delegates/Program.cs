@@ -38,7 +38,8 @@ namespace delegates
             dynamicArray.DataInserted += subscribers.OnDataInserted;   // registration of subscription for inserted
             dynamicArray.DataAdded += subscribers.OnDataAdded;            // registration of subscription for added
             dynamicArray.DataRemoved += subscribers.OnDataRemoved;            // registration of subscription for removed
-            
+            dynamicArray.QueueIsFull += subscribers.OnQueueIsFull;
+            dynamicArray.QueueIsEmpty += subscribers.OnQueueIsEmpty;
 
             while (free1 > 0)
             {

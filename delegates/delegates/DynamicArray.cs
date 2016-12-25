@@ -56,7 +56,7 @@ namespace delegates
             if (size == Array.Length)
             {
                 capacity = 2 * capacity;
-                Console.WriteLine(capacity);//debug
+              //  Console.WriteLine(capacity);//debug
                 copyArray(capacity);
                 Array[size] = addValue;
                 size++;
@@ -75,8 +75,6 @@ namespace delegates
             for (int i = IndexToInsert; i < (size - 1); i++)          //move elements to left
             {
                 Array[i] = Array[i + 1];
-                
-                
             }
             size--;
 
@@ -111,10 +109,13 @@ namespace delegates
 
             if (size == maxSize)
             {
-                Console.WriteLine("QUEUE is full");
+                throw new MyFullExeption();
+                //Console.WriteLine("QUEUE is full");
             }
-            return true;
 
+            OnQueueIsFull();
+            return true;
+            
         }
 
 
@@ -123,9 +124,10 @@ namespace delegates
 
             if (size == 0)
             {
-                Console.WriteLine("QUEUE is empty");
+                throw new MyEmptyExeption ();
+                //   Console.WriteLine("QUEUE is empty");
             }
-
+            OnQueueIsEmpty ();
             return true;
 
         }
@@ -174,14 +176,27 @@ namespace delegates
 
         public delegate void DataRemovedEventHandler(object source, EventArgs args);
         public event DataRemovedEventHandler DataRemoved;
-
         protected virtual void OnDataRemoved()
         {
             if (DataRemoved != null)
                 DataRemoved(this, EventArgs.Empty);
-
         }
 
+        public delegate void QueueIsEmptyEventHandler(object source, EventArgs args);
+        public event QueueIsEmptyEventHandler QueueIsEmpty;
+        protected virtual void OnQueueIsEmpty()
+        {
+            if (QueueIsEmpty != null)
+                QueueIsEmpty(this, EventArgs.Empty);
+        }
+
+        public delegate void QueueIsFullEventHandler(object source, EventArgs args);
+        public event QueueIsFullEventHandler QueueIsFull;
+        protected virtual void OnQueueIsFull()
+        {
+            if (QueueIsFull != null)
+                QueueIsFull(this, EventArgs.Empty);
+        }
 
     }
 

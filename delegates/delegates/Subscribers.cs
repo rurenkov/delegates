@@ -24,6 +24,15 @@ namespace delegates
             Console.WriteLine("The value was DELETED successfully (Events)");
         }
 
+        public void OnQueueIsEmpty(object source, EventArgs e)
+        {
+            Console.WriteLine("Queue is Empty (Events)");
+        }
+
+        public void OnQueueIsFull(object source, EventArgs e)
+        {
+            Console.WriteLine("Queue is Full (Events)");
+        }
 
 
     }

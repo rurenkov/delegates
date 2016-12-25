@@ -46,7 +46,9 @@
     <Compile Include="Dynamic.cs" />
     <Compile Include="DynamicQueue.cs" />
     <Compile Include="DynamicStack.cs" />
-    <Compile Include="DynamycArray.cs" />
+    <Compile Include="DynamicArray.cs" />
+    <Compile Include="MyEmptyExeption.cs" />
+    <Compile Include="MyFullExeption.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Subscribers.cs" />
